@@ -8,6 +8,11 @@ import Foundation
     let defaultValue: Value
     let storage = UserDefaults.standard
     
+    public init(key: String, defaultValue: Value) {
+        self.key = key
+        self.defaultValue = defaultValue
+    }
+    
     public var wrappedValue: Value {
         get {
             let value = storage.value(forKey: key) as? Value
@@ -26,7 +31,7 @@ import Foundation
 
 // Convenience initializer for a case where Value is optional
 extension UserDefaultsStorage where Value: ExpressibleByNilLiteral {
-    init(key: String) {
+    public init(key: String) {
         self.init(key: key, defaultValue: nil)
     }
 }
