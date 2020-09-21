@@ -3,12 +3,12 @@ import Foundation
 /// Storing and reading properties from UserDefaults.
 /// Returns a default value if key is not found from UserDefaults.
 /// Supports also optional types.
-@propertyWrapper struct UserDefaultsStorage<Value> {
+@propertyWrapper public struct UserDefaultsStorage<Value> {
     let key: String
     let defaultValue: Value
     let storage = UserDefaults.standard
     
-    var wrappedValue: Value {
+    public var wrappedValue: Value {
         get {
             let value = storage.value(forKey: key) as? Value
             return value ?? defaultValue
