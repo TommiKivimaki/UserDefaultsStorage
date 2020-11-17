@@ -5,8 +5,8 @@ import Combine
 import UserDefaultsStorage
 
 /// An example wrapper around `UserDefaultsStorage` shows how to use Combine
-/// and subscribe to changes in UserDefaults.
-final class UserDefaultsController: ObservableObject {
+/// and publish to changes in UserDefaults.
+final class UserDefaultsPublished: ObservableObject {
 
     @UserDefaultsStorage(key: "isTest", defaultValue: false)
     var isTest: Bool {
@@ -24,7 +24,7 @@ final class UserDefaultsController: ObservableObject {
     }
 
 
-    @UserDefaultsStorage(key: "optionalTest", defaultValue: 1)
+    @UserDefaultsStorage(key: "optionalTest")
     var optionalTest: Int? {
         willSet {
             objectWillChange.send()
