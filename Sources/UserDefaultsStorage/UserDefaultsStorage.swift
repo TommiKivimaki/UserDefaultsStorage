@@ -24,7 +24,7 @@ import Foundation
             } else {
                 storage.setValue(newValue, forKey: key)
             }
-            
+        
         }
     }
 }
