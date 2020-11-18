@@ -44,6 +44,7 @@ final class UserDefaultsStorageTests: XCTestCase {
     
     static var allTests = [
         ("testNonOptionalValue", testNonOptionalValue),
-        ("testOptionalValue", testOptionalValue)
+        ("testOptionalValue", testOptionalValue),
+        ("testUserDefaultsKey", testUserDefaultsKey)
     ]
 }

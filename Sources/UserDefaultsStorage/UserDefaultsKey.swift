@@ -2,7 +2,6 @@
 
 import Foundation
 
-
 /// Type safe key for UserDefaults
 /// Extend this key to create your own keys
 ///
