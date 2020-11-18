@@ -2,4 +2,8 @@
 
 Storing and reading properties from UserDefaults. Returns a default value if key is not found. Supports also optional types.
 
-Tests show an example `UserDefaultsPublished`, which wraps around `UserDefaultsStorage` and uses Combine to publish changes. 
+Extend  `UserDefaultsKey` to crea your own type safe keys.
+
+## Publishing changes with Combine
+
+There is an example `UserDefaultsPublished` in Tests, which wraps around `UserDefaultsStorage` and uses Combine to publish changes. 

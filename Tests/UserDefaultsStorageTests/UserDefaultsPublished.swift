@@ -4,8 +4,8 @@ import Foundation
 import Combine
 import UserDefaultsStorage
 
-/// An example wrapper around `UserDefaultsStorage` shows how to use Combine
-/// and publish to changes in UserDefaults.
+/// An example wrapper around `UserDefaultsStorage`. Shows how to use Combine
+/// and publish the changes in UserDefaults.
 final class UserDefaultsPublished: ObservableObject {
 
     @UserDefaultsStorage(key: "isTest", defaultValue: false)

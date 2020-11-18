@@ -6,6 +6,7 @@ final class UserDefaultsStorageTests: XCTestCase {
     
     @UserDefaultsStorage<String>(key: "myName", defaultValue: "") var myName
     @UserDefaultsStorage<Int?>(key: "age") var age: Int?
+    @UserDefaultsStorage(key: UserDefaultsKey.testKey, defaultValue: "Initial value") var testKey
 
     private let userDefaultsController = UserDefaultsPublished()
     private var subscriptions = Set<AnyCancellable>()
@@ -33,6 +34,12 @@ final class UserDefaultsStorageTests: XCTestCase {
         
         age = nil
         XCTAssertNil(age)
+    }
+
+    func testUserDefaultsKey() {
+        XCTAssertEqual(testKey, "Initial value")
+        testKey = "Updated value"
+        XCTAssertEqual(testKey, "Updated value")
     }
     
     static var allTests = [
